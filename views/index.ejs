@@ -1,130 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Kabati Admin</title>
+        <title>Kabati Admin</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="/stylesheets/metisMenu.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="/stylesheets/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="/stylesheets/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/stylesheets/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom Fonts -->
+        <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div id="wrapper">
+        <div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Kabati</a>
-            </div>
-            <!-- /.navbar-header -->
-
-           
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       
-                        <li>
-                            <a href="/"><i class="fa fa-login fa-fw"></i> Login</a>
-                        </li>
-						<li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Register</a>
-                        </li>
-                        
-                        
-                       
-                    </ul>
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Kabati Information System</a>
                 </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
+                <!-- /.navbar-header -->
 
-        <!-- Page Content -->
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    
-					<div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+
+                            <li>
+                                <a href="/"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+                            </li>
+
+                            <li>
+                                <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+
+                        </ul>
                     </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <!-- partials part-->
+            <!-- Page Content -->
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="login-panel panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Please Sign In</h3>
                                 </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                <div class="panel-body">
+                                    <form role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="right">
+                                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                                </label>                                  
+                                            </div>
+                                            <!-- Change this to a button or input when using this as a form -->
+                                            <a href="/" class="btn btn-lg btn-success btn-block">Login</a>
+                                        </fieldset>
+                                    </form>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
-                            </fieldset>
-                        </form>
+                            </div>
+                        </div>
+
                     </div>
+                    <!-- /.row -->
                 </div>
+                <!-- /.container-fluid -->
             </div>
-					
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- /#page-wrapper -->
-	
-	</div>
-	
-	<!-- /#Footer -->
-	<div class="text-center" style="border-top: 1px solid #e7e7e7; padding-top:5px; color: #337ab7">
-		<p>Kabati By Kazimoto &copy; 2017</p>
-	</div>
-    
-    <!-- /#wrapper -->
+            <!-- /#page-wrapper -->
 
-    <!-- jQuery -->
-    <script src="/javascripts/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/javascripts/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="/javascripts/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/javascripts/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+            <!-- /#Footer -->
+            <% include partials/footer.ejs %>
