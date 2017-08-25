@@ -3,13 +3,14 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var expressSession = require('express-session');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 
-var index = require('./routes/index');
-var dashboard = require('./routes/dashboard');
-var play = require('./routes/play');
-var add_player = require('./routes/add-player');
+var index = require('./routes/indexRoute');
+var dashboard = require('./routes/dashboardRoute');
+var play = require('./routes/playRoute');
+var add_player = require('./routes/add-playerRoute');
 
 var app = express();
 
@@ -25,9 +26,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressSession({secret:'2sec',saveUninitialized: false, resave: false}));
 
+//session to be used in all views
+app.use(function(req,res,next){
+    res.locals.session = req.session;
+    next();
+});
+
+//Links
 app.use('/', index);
-app.use('/login', index);
 app.use('/dashboard', dashboard);
 app.use('/play', play);
 app.use('/addplayer', add_player);
