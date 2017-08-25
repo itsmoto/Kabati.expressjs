@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var playerController =  require('../controllers/playerController');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('play');
-});
+router.get('/',playerController.add_player);
 
 module.exports = router;
